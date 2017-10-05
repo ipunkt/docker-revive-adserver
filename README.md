@@ -10,3 +10,11 @@ This project aims to have a usable, updatable installation of the [revive adserv
  * check if DB `_410` exists OR exit
  * if `_410` is not empty and has the 4.1.0 installed, change ENV-VAR DB_NAME to `_410`
  * if `_410` is empty, follow [upgrade instructions](https://www.revive-adserver.com/support/upgrading/)
+
+# Config
+## Environment
+* `DB_HOST=localhost`
+* `DB_PORT=3306`
+* `DB_NAME=revive_400`
+* `DB_USERNAME=root`
+* `DB_PASSWORD=`
