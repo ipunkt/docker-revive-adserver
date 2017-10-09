@@ -14,6 +14,12 @@ else
         exit 1
     fi
     printf "\e[92mupdate to %s possible\n\e[0m" $THIS_VERSION
+# 1. backup active database
+# mysqldump -uUSER -pPASSWORD OLDDATABASE –skip-lock-tables > FILE.sql
+    mysqldump -u$DB_USER -p$DB_PASSWORD $DB_NAME --skip-lock-tables
+
+# 2. import into new database
+# mysql -uUSER -pPASSWORD NEWDATABASE < FILE.sql
 
 fi
 
