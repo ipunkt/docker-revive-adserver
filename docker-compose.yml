@@ -2,3 +2,22 @@ version: '2'
 
 services:
   revive:
+    build: ./revive-adserver
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_NAME=revive_adserver_402
+      - DB_USERNAME=revive
+      - DB_PASSWORT=revive
+    ports:
+    - 8081:80
+    links:
+    - mysql
+
+  mysql:
+    image: mariadb:latest
+    environment:
+      - MYSQL_DATABASE=revive_adserver_402
+      - MYSQL_USER=revive
+      - MYSQL_PASSWORD=revive
+      - MYSQL_ROOT_PASSWORD=root

@@ -1,5 +1,5 @@
 FROM php:7.1-apache
-ARG REVIVE_VERSION="4.0.2"
+ARG REVIVE_VERSION="3.2.5"
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.vendor="ipunkt Business Solutions OHG" \
       org.label-schema.version="$REVIVE_VERSION" \
@@ -9,7 +9,7 @@ ENV REVIVE_VERSION="$REVIVE_VERSION"
 
 ENV DB_HOST="localhost"
 ENV DB_PORT="3306"
-ENV DB_NAME="revive_adserver_402"
+ENV DB_NAME="revive_adserver_325"
 ENV DB_USERNAME="root"
 ENV DB_PASSWORT=""
 
@@ -37,4 +37,4 @@ VOLUME /var/www/html/www/images
 # setup startscript
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/docker-entrypoint.sh
-CMD ["bash", "/usr/local/bin/docker-entrypoint.sh"]
+CMD ["/bin/bash", "/usr/local/bin/docker-entrypoint.sh"]
