@@ -11,7 +11,7 @@ ENV DB_HOST="localhost"
 ENV DB_PORT="3306"
 ENV DB_NAME="revive_adserver_325"
 ENV DB_USERNAME="root"
-ENV DB_PASSWORT=""
+ENV DB_PASSWORD=""
 
 # Install mysql-client and php mysqli extension
 RUN apt-get update && apt-get -y install mysql-client \
